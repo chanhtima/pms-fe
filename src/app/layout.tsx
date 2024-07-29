@@ -1,10 +1,9 @@
 import "../styles/globals.css";
 import { Prompt } from 'next/font/google'
-import ThemeRegistry from '@/components/Theme/ThemeRegistry';
+import ThemeRegistry from '../components/Theme/ThemeRegistry';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import 'primeflex/primeflex.css';
 
 const prompt = Prompt({
   weight: ['300', '400', '500', '700'],
