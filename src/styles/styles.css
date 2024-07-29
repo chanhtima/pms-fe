@@ -1,0 +1,19 @@
+.globals-layout{
+   @apply flex min-h-screen flex-col px-10 sm:px-24 py-6
+}
+.globals-padding{
+   @apply px-10 sm:px-24 py-4  
+}
+
+/* menu navbav */
+.p-megamenu {
+   background: #ffffff;
+   color: #495057;
+   border: none;
+   /* border-radius: 3px; */
+}
+
+.p-megamenu[pr_id_1].p-megamenu-mobile-active .p-megamenu-root-list {
+   width: unset !important;
+   right: 6px;
+}
