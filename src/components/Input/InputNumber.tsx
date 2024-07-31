@@ -41,8 +41,8 @@ export default function InputNumber({
                                 placeholder={placeholder}
                                 disabled={disabled}
                                 useGrouping={false}
-                                prefix=''
-                                suffix=''
+                                // prefix=''
+                                // suffix=''
                                 maxLength={maxLength}
                                 min={0}
                                 // ถ้าต้องการใช้ปุ่มให้เปิดข้างล่าง
