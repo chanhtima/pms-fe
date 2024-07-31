@@ -11,7 +11,9 @@ function DropdownInput({
     disabled = false,
     filter = false,
     EN = false,
+    invalid = false,
     onSelected,
+    className,
     onChange: onSelectedChange,
     placeholder
 }: DropdownInputProps) {
@@ -27,15 +29,20 @@ function DropdownInput({
     };
 
     return (
-        <div className="field flex flex-col">
-            {label && <label htmlFor={name}>{label}</label>}
+        <div className={`field globals-input-layout ${className}`}>
+        {label && (
+            <label className='mb-1'>
+                {label}
+                {rules?.required && <span className="text-[#FF0000]"> *</span>}
+            </label>
+        )}
             <Controller
                 name={name}
                 control={control}
                 rules={rules}
-                render={({ field }) => (
+                render={({ field, fieldState }) => (
                     <Dropdown
-                        className=" border focus:border-none"
+                    className={`globals-input  ${fieldState.invalid ? 'p-invalid !border-red-600' : ''}`}
                         id={name}
                         {...field}
                         options={
@@ -44,12 +51,10 @@ function DropdownInput({
                               value: item.key,
                             })) as any
                           }
-                          
                         disabled={disabled}
                         placeholder={placeholder || (EN ? "Please select the information." : "กรุณาเลือกข้อมูล")}
                         onChange={(e) => {
                             field.onChange(e.value);
-                            console.log("Selected value:", e.value);
                             handleChange(e);
                         }}
                         filter={filter}
