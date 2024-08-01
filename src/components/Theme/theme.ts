@@ -1,7 +1,7 @@
 import { Prompt } from 'next/font/google';
 import { createTheme } from '@mui/material/styles';
 
-const colorPrimary = "linear-gradient(180deg, #26A2FF 64.06%, #036 100%, #036 100%)";
+// const colorPrimary = "linear-gradient(180deg, #26A2FF 64.06%, #036 100%, #036 100%)";
 
 const prompt = Prompt({
     weight: ['300', '400', '500', '700'],
@@ -12,6 +12,7 @@ const prompt = Prompt({
 const theme = createTheme({
     palette: {
         primary: {
+            // main: '#26A2FF',
             main: '#26A2FF',
         },
     },
@@ -43,7 +44,7 @@ const theme = createTheme({
         MuiDrawer: {
             styleOverrides: {
                 paper: {
-                    background: colorPrimary,
+                    background: '#ffff',
                 }
             }
         }

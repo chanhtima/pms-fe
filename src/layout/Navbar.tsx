@@ -9,7 +9,7 @@ export default function Navbar() {
             <nav className=" flex justify-between items-center">
                 {/* logo & name web */}
                 <a href="/" className="flex items-center gap-2">
-                    <Avatar image="favicon.ico" size="large" />
+                    <Avatar image="A-Star-Logo.png" size="large" />
                     <div className="">example</div>
                 </a>
                 <div className=" flex items-center max-lg:flex-row-reverse gap-2">
@@ -20,7 +20,7 @@ export default function Navbar() {
                     {/* user */}
                     <div className="flex items-center gap-2">
                         <div className=" max-sm:hidden">Admin@gmail.com</div>
-                        <Avatar image="favicon.ico" label="Text with image" />
+                        <Avatar image="A-Star-Logo.png" size="large" />
 
                     </div>
                 </div>

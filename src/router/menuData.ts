@@ -2,13 +2,14 @@ import { MenuItem } from "primereact/menuitem";
 
 export const items: MenuItem[] = [
     {
-        label: 'example', icon: 'pi pi-fw pi-video',
-        url:'example'
+        label: 'upload',
+        icon: 'pi pi-fw pi-video',
+        url: 'upload'
     },
- 
+
     {
         label: 'Form', icon: 'pi pi-fw pi-calendar',
-        url:'form'
+        url: 'form'
     },
     {
         label: 'Settings', icon: 'pi pi-fw pi-cog',

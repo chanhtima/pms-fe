@@ -7,7 +7,7 @@ export default function Sidebar() {
     // const router = useRouter();
     return (
         <div>
-        <MegaMenu model={items} orientation="vertical" breakpoint="767px" />
+            <MegaMenu model={items} orientation="vertical" breakpoint="767px" />
         </div>
     )
 }
