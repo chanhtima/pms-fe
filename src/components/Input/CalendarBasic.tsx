@@ -6,8 +6,7 @@ import { FloatInputProps } from '@/src/models/input.model';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
-import { addYears, format, parse } from 'date-fns';
-import { th } from 'date-fns/locale';
+
 export default function CalendarBasic({
   label,
   name,
