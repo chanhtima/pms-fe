@@ -6,10 +6,14 @@ export const items: MenuItem[] = [
         icon: 'pi pi-fw pi-video',
         url: 'upload'
     },
-
     {
         label: 'Form', icon: 'pi pi-fw pi-calendar',
         url: 'form'
+    },
+    {
+        label: "Editor",
+        icon: "pi pi-fw pi-table",
+        url: "editor",
     },
     {
         label: 'Settings', icon: 'pi pi-fw pi-cog',
