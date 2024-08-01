@@ -11,8 +11,8 @@ export default function InputNumber({
     placeholder,
     disabled,
     suffix,
-    maxLength
-    // currency = 'USD', // Add a default currency prop if not provided
+    maxLength,
+    prefix
 }: InputNumberProps) {
     const { control } = useFormContext();
 
@@ -29,7 +29,7 @@ export default function InputNumber({
                 control={control}
                 rules={rules}
                 render={({ field, fieldState }) => {
-                    const value = typeof field.value === 'number' ? field.value : 0;
+                    const value = field.value === 'number' ? field.value : 0;
 
                     return (
                         <div>
@@ -38,11 +38,12 @@ export default function InputNumber({
                                 id={name}
                                 {...field}
                                 value={value}
+                                onChange={(e) => field.onChange(e.value)}
                                 placeholder={placeholder}
                                 disabled={disabled}
-                                useGrouping={false}
-                                // prefix=''
-                                // suffix=''
+                                useGrouping={false}  //ถ้าต้องการ ให้ตัวเลข 1,000 ให้เอาอันนี้ออก
+                                prefix={prefix} // หน่วยนับ หรือ ข้อความที่แสดงข้างหน้าตัวเลข
+                                suffix={suffix} // หน่วยนับ หรือ ข้อความที่แสดงต่อท้ายตตัวเลข
                                 maxLength={maxLength}
                                 min={0}
                                 // ถ้าต้องการใช้ปุ่มให้เปิดข้างล่าง

@@ -23,7 +23,7 @@
    @apply  flex flex-col mb-2 text-sm 
 }
 .globals-input{
-   @apply border h-11 px-2 rounded-md 
+   @apply border h-11 px-2 
 }
 .p-inputtext:enabled:focus{
    box-shadow: none;
@@ -44,4 +44,22 @@
    display: flex;
    width: 100%;
 
+}
+
+.p-calendar{
+   display: flex;
+   /* position: relative; */
+   @apply border h-11 pl-2   rounded-md
+}
+
+.p-button.p-button-icon-only {
+   background-color: rgb(60, 60, 60);
+   color: #ffffff;
+}
+.p-inputgroup-addon{
+   background-color: rgb(60, 60, 60);
+   color: #ffffff;
+}
+.p-inputotp-input{
+   @apply border h-11 px-2 
 }
