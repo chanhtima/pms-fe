@@ -33,6 +33,8 @@ export type FloatInputProps = {
   error?: boolean;
   customSetValueFunction?: (value: string) => void;
   className?: string;
+  icon?: React.ReactNode;
+  IconFields?:boolean;
   autoFocus?: boolean;
   options?: { label: string; key: string }[];
   toggleMask?: boolean;  
@@ -48,11 +50,24 @@ export type InputNumberProps = {
   EN?: boolean;
   disabled?: boolean;
   copyToClipboard?: boolean;
-  suffix?: React.ReactNode;
+  suffix?: string;
+  prefix?: string;
   maxLength?: number;
   error?: boolean;
   className?: string;
   autoFocus?: boolean;
 
+}
+export type InputOtpProps = {
+  label?: string;
+  name: string;
+  rules?: any;
+  placeholder?: string;
+  EN?: boolean;
+  disabled?: boolean;
+  error?: boolean;
+  className?: string;
+  autoFocus?: boolean;
+  length:number
 }
 

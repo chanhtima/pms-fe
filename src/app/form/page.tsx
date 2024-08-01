@@ -6,14 +6,17 @@ import FloatInput from '@/src/components/Input/FloatInput';
 import { Divider } from "primereact/divider";
 import DropdownInput from '@/src/components/Input/DropdownInput ';
 import InputNumber from '@/src/components/Input/InputNumber';
+import CalendarBasic from '@/src/components/Input/CalendarBasic';
+import FloatInputIIcons from '@/src/components/Input/FloatInputIIcons';
+import InputOtps from '@/src/components/Input/InputOtps';
 
 type FormValues = {
     dropdown: string;
     name: string;
     email: string;
-    age: string;
     tel: string;
-    password: string
+    password: string;
+    number: number;
 };
 
 export default function Page() {
@@ -21,15 +24,15 @@ export default function Page() {
         // dropdown: "3",
         // name: "4339",
         // email: "admin@j.com",
-        // age: "12",
         // tel: '09-517782236',
         // password:"123456",
+        // number: 0,
         dropdown: "",
         name: "",
         email: "",
-        age: "",
         tel: '',
         password: "",
+        number: 0,
     };
 
     const methods = useForm<FormValues>({ defaultValues, shouldFocusError: true });
@@ -63,13 +66,24 @@ export default function Page() {
     return (
         <FormProvider {...methods}>
             <form onSubmit={handleSubmit(onSubmit)} >
-                <div className=" grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-x-4">
+                <div className=" grid grid-cols-1  md:grid-cols-2  gap-x-4">
+
                     <FloatInput
                         name="name"
                         label="Name"
                         type="text"
                         rules={{ required: "Name is required." }}
+                     
                     />
+                    <FloatInputIIcons
+                        name="nameIcon"
+                        label="Input Icon"
+                        type="text"
+                        icon={( <i className="pi pi-user"></i>)}
+                        // IconFields // ถ้าต้องการให้ ไอคคอนอยู่ใน  Fields
+                    />
+                 
+
                     <FloatInput
                         name="password"
                         label="Password"
@@ -77,7 +91,6 @@ export default function Page() {
                         toggleMask
                         header={passwordHeader}
                         footer={passwordFooter}
-                        rules={{ required: "Password is required." }}
                         maxLength={8}
                     />
 
@@ -111,9 +124,19 @@ export default function Page() {
                     <InputNumber
                         name="number"
                         label="Number"
-                        // type="text"
-                        // rules={{ required: "Name is required." }}
                     />
+                    <InputOtps
+                        name="otp"
+                        label="Otp"
+                        length={12}
+                        rules={{ required: "Tel is required." }}
+
+                    />
+                    <CalendarBasic
+                        name="calendar"
+                        label="Calendar"
+                    />
+
                 </div>
                 <FloatInput
                     name="textarea"
