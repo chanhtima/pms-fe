@@ -17,6 +17,7 @@ const config: Config = {
       },
       colors: {
         "sugar-1": "#4C3B28",
+        "orange-1":"#CC822C",
       },
     },
   },

@@ -9,7 +9,7 @@ export default function CardPtroject({
     name
 }: CardPtrojectProps) {
     // กำหนด URL ตามชื่อ
-    const targetUrl = name === 'จัดการโครงการ' ? '/management' : url;
+    const targetUrl = name === 'จัดการโครงการ' ? '/home' : url;
 
     const content = (
         <div className='box-layout-globals text-center h-48 max-h-48 flex flex-col items-center justify-center '>
